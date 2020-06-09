@@ -1,0 +1,24 @@
+<%= link_to 'Back', api_heroes_path%>
+<table>
+  <th>Start time</th>
+  <th>Duration</th> 
+  <th>Radiant win</th>
+  <th>League name</th>
+  <th>Radiant</th> 
+  <th>Kills</th>
+  <th>Deaths</th>
+  <th>Assists</th>
+  
+  <% @matches.each do |match| %>
+    <tr>
+      <td><%= match['start_time'] %></td>
+      <td><%= match['duration'] %></td>
+      <td><%= match['radiant_win'] %></td>
+      <td><%= match['league_name'] %></td>
+      <td><%= match['radiant'] %></td>
+      <td><%= match['kills'] %></td>
+      <td><%= match['deaths'] %></td>
+      <td><%= match['assists'] %></td>
+    </tr>
+  <% end %>
+</table>
